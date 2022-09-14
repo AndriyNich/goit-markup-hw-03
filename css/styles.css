@@ -1,0 +1,232 @@
+:root {
+  /* text color */
+  --text-color: #757575;
+  --text-title-color: #212121;
+  --text-alternative-color: #2196f3;
+  --text-secondary-alternative-color: #ffffff;
+  /* logo color */
+  --logo-first-color: #2196f3;
+  --logo-secondary-color: #000000;
+  --logo-alternative-color: #ffffff;
+  /* button color */
+  --btn-text-color: #212121;
+  --btn-text-alternative-color: #ffffff;
+  --btn-background-color: #f5f4fa;
+  --btn-background-secondary-color: #2196f3;
+  /* link color */
+  --link-color: #212121;
+  --link-secondary-color: #757575;
+  --link-alternative-color: #2196f3;
+  --link-secondary-alternative-color: rgba(255, 255, 255, 0.6);
+  /* background color */
+  --background-color: #ffffff;
+  --footer-background-color: #2f303a;
+  --team-background-color: #f5f4fa;
+}
+
+.list-none {
+  list-style: none;
+}
+
+.bs-txt {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.link-none {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Section Header */
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  color: var(--logo-first-color);
+}
+
+.logo-header {
+  color: var(--logo-secondary-color);
+}
+
+.logo-footer {
+  color: var(--logo-alternative-color);
+}
+
+.menu-link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: var(--link-color);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--link-alternative-color);
+}
+
+.header-address {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: var(--link-secondary-color);
+}
+
+.header-address:hover,
+.header-address:focus {
+  color: var(--link-alternative-color);
+}
+
+/* Section body index.html */
+.hero {
+  background-color: var(--footer-background-color);
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--text-secondary-alternative-color);
+}
+
+.btn {
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  color: var(--btn-text-alternative-color);
+  background-color: var(--btn-background-secondary-color);
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--btn-text-color);
+  background-color: var(--btn-background-color);
+}
+
+.caption-hiden {
+  display: none;
+}
+
+.subject {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.heading {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.subject,
+.heading {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.fio {
+  font-weight: 500;
+}
+
+.fio,
+.txt {
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.subject,
+.heading,
+.fio {
+  color: var(--text-title-color);
+}
+
+.team {
+  background-color: var(--team-background-color);
+}
+
+/* Section body portfolio.html */
+.btn-portfolio {
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  color: var(--btn-text-color);
+  background-color: var(--btn-background-color);
+}
+
+.btn-portfolio:hover,
+.btn-portfolio:focus {
+  color: var(--btn-text-alternative-color);
+  background-color: var(--btn-background-secondary-color);
+}
+
+.card-caption {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--text-title-color);
+}
+
+.card-txt {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+}
+
+/* Section Footer */
+.page-footer {
+  background-color: var(--footer-background-color);
+}
+
+.footer-text {
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--text-secondary-alternative-color);
+}
+
+.footer-link {
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--link-secondary-alternative-color);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--link-alternative-color);
+}
