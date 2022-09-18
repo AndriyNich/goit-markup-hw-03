@@ -22,6 +22,8 @@
   --background-color: #ffffff;
   --footer-background-color: #2f303a;
   --team-background-color: #f5f4fa;
+  /* gap */
+  --gap-width: 30px;
 }
 
 .list-none {
@@ -45,7 +47,52 @@ body {
   background-color: var(--background-color);
 }
 
+h1,
+h2,
+h3,
+ul,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-list {
+  display: flex;
+  margin-left: 93px;
+}
+
+.page-header .list {
+  display: flex;
+  margin-left: auto;
+}
+
+.page-header .list > .item + .item {
+  margin-left: 50px;
+}
 /* Section Header */
+.page-header .container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list > .item {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.nav-list > .item + .item {
+  margin-left: 50px;
+}
+
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -77,6 +124,15 @@ body {
   color: var(--link-alternative-color);
 }
 
+.menu-link.current {
+  color: var(--link-alternative-color);
+}
+
+.menu-link.current:hover,
+.menu-link.current:focus {
+  color: var(--link-color);
+}
+
 .header-address {
   font-weight: 500;
   line-height: 1.14;
@@ -91,11 +147,22 @@ body {
 }
 
 /* Section body index.html */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .hero {
   background-color: var(--footer-background-color);
 }
 
+.hero > .container {
+  text-align: center;
+}
+
 .hero-title {
+  margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -127,16 +194,30 @@ body {
 }
 
 .caption-hiden {
-  display: none;
+  /* display: none; */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .subject {
+  margin-bottom: 50px;
+
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
 }
 
 .heading {
+  margin-bottom: 10px;
+
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -164,6 +245,24 @@ body {
 .heading,
 .fio {
   color: var(--text-title-color);
+}
+
+.adv-list,
+.do-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.adv-list > .item {
+  width: 270px;
+}
+
+.do-list .item {
+  font-size: 0;
+}
+
+.do-list .picture {
+  font-size: 14px;
 }
 
 .team {
