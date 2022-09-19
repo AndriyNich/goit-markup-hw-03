@@ -230,6 +230,9 @@ p {
 }
 
 .fio {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
   font-weight: 500;
 }
 
@@ -257,17 +260,35 @@ p {
   width: 270px;
 }
 
-.do-list .item {
+.do-list .item,
+.team-list .item {
   font-size: 0;
 }
+/* .page-footer .list-none,
+.page-footer .item  */
 
-.do-list .picture {
+.do-list .picture,
+.team-list .picture {
   font-size: 14px;
 }
+/* .footer-link */
+
+/* .team-list .picture {
+  margin-bottom: 30px;
+} */
 
 .team {
   background-color: var(--team-background-color);
 }
+
+.team-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .team-list .link-none {
+  margin-bottom: 30px;
+} */
 
 /* Section body portfolio.html */
 .btn-portfolio {
@@ -309,7 +330,19 @@ p {
   background-color: var(--footer-background-color);
 }
 
+.page-footer > .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.page-footer .logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
 .footer-text {
+  margin-bottom: 9px;
+
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -328,4 +361,14 @@ p {
 .footer-link:hover,
 .footer-link:focus {
   color: var(--link-alternative-color);
+}
+
+/* .page-footer .list-none,
+.page-footer .item, */
+/* .footer-link {
+  display: block;
+} */
+
+.page-footer .item:not(:last-child) {
+  margin-bottom: 9px;
 }
