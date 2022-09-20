@@ -23,7 +23,17 @@
   --footer-background-color: #2f303a;
   --team-background-color: #f5f4fa;
   /* gap */
-  --gap-width: 30px;
+  --cart-gap: 30px;
+  /* button */
+  --button-border: 1 solid transparent;
+  --button-radius: 4px;
+  --button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  --button-hero-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  /* team */
+  --team-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --team-radius: 0px 0px 4px 4px;
 }
 
 .list-none {
@@ -54,6 +64,18 @@ ul,
 p {
   padding: 0;
   margin: 0;
+}
+
+img {
+  /* display: block; */
+  /* max-width: 100%; */
+  /* height: auto; */
+}
+
+.picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -185,6 +207,12 @@ p {
 
   color: var(--btn-text-alternative-color);
   background-color: var(--btn-background-secondary-color);
+
+  border: var(--button-border);
+  border-radius: var(--button-radius);
+  box-shadow: var(--button-hero-shadow);
+
+  padding: 10px 32px;
 }
 
 .btn:hover,
@@ -193,8 +221,7 @@ p {
   background-color: var(--btn-background-color);
 }
 
-.caption-hiden {
-  /* display: none; */
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -229,11 +256,16 @@ p {
   letter-spacing: 0.03em;
 }
 
-.fio {
-  margin-top: 30px;
-  margin-bottom: 10px;
+.team-list .link-none {
+  display: block;
 
+  margin-bottom: 30px;
+}
+
+.fio {
   font-weight: 500;
+
+  margin-bottom: 10px;
 }
 
 .fio,
@@ -260,23 +292,6 @@ p {
   width: 270px;
 }
 
-.do-list .item,
-.team-list .item {
-  font-size: 0;
-}
-/* .page-footer .list-none,
-.page-footer .item  */
-
-.do-list .picture,
-.team-list .picture {
-  font-size: 14px;
-}
-/* .footer-link */
-
-/* .team-list .picture {
-  margin-bottom: 30px;
-} */
-
 .team {
   background-color: var(--team-background-color);
 }
@@ -286,11 +301,25 @@ p {
   justify-content: space-between;
 }
 
-/* .team-list .link-none {
-  margin-bottom: 30px;
-} */
+.team-list > .item {
+  box-shadow: var(--team-shadow);
+  border-radius: var(--team-radius);
+
+  padding-bottom: 30px;
+}
 
 /* Section body portfolio.html */
+
+.filter {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.filter > .item + .item {
+  margin-left: 8px;
+}
+
 .btn-portfolio {
   cursor: pointer;
 
@@ -303,12 +332,43 @@ p {
 
   color: var(--btn-text-color);
   background-color: var(--btn-background-color);
+
+  padding: 6px 22px;
+
+  border: var(--button-border);
+  border-radius: var(--button-radius);
 }
 
 .btn-portfolio:hover,
 .btn-portfolio:focus {
   color: var(--btn-text-alternative-color);
   background-color: var(--btn-background-secondary-color);
+
+  box-shadow: var(--button-shadow);
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-left: calc(-1 * var(--cart-gap));
+  margin-top: calc(-1 * var(--cart-gap));
+}
+
+.card-list > .item {
+  flex-basis: calc(100% / 3 - var(--cart-gap));
+
+  margin-left: var(--cart-gap);
+  margin-top: var(--cart-gap);
+  padding-bottom: 20px;
+
+  border: 1px solid #eeeeee;
+  outline: hidden;
+}
+
+.card-list .link-none {
+  display: block;
+  margin-bottom: 20px;
 }
 
 .card-caption {
@@ -317,12 +377,19 @@ p {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--text-title-color);
+
+  margin-bottom: 4px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .card-txt {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 /* Section Footer */
@@ -351,6 +418,7 @@ p {
 }
 
 .footer-link {
+  display: block;
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
