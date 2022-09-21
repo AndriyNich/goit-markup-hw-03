@@ -68,8 +68,8 @@ p {
 
 .picture {
   display: block;
-  max-width: 100%;
-  height: auto;
+  /* max-width: 100%;
+  height: auto; */
 }
 
 .container {
@@ -80,9 +80,18 @@ p {
   margin-right: auto;
 }
 
+/* Section Header */
+
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
+.navigation {
+  margin-left: 93px;
+}
+
 .nav-list {
   display: flex;
-  margin-left: 93px;
 }
 
 .page-header .list {
@@ -93,8 +102,6 @@ p {
 .page-header .list > .item + .item {
   margin-left: 50px;
 }
-
-/* Section Header */
 
 .page-header .container {
   display: flex;
@@ -168,12 +175,6 @@ p {
   color: var(--link-alternative-color);
 }
 
-/* header bottom line */
-
-.page-header {
-  border-bottom: 1px solid #ececec;
-}
-
 /* Section body index.html */
 .section {
   padding-top: 94px;
@@ -181,6 +182,9 @@ p {
 }
 
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   background-color: var(--footer-background-color);
 }
 
@@ -308,6 +312,8 @@ p {
 }
 
 .team-list > .item {
+  background-color: var(--background-color);
+
   box-shadow: var(--team-shadow);
   border-radius: var(--team-radius);
 
@@ -318,8 +324,9 @@ p {
 
 .filter {
   display: flex;
-  margin-bottom: 50px;
   justify-content: center;
+
+  margin-bottom: 50px;
 }
 
 .filter > .item + .item {
@@ -366,15 +373,18 @@ p {
 
   margin-left: var(--cart-gap);
   margin-top: var(--cart-gap);
-  padding-bottom: 20px;
-
-  border: 1px solid #eeeeee;
-  outline: hidden;
 }
 
 .card-list .link-none {
   display: block;
-  margin-bottom: 20px;
+}
+
+.card-footer {
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+
+  padding: 20px 24px;
 }
 
 .card-caption {
@@ -385,27 +395,20 @@ p {
   color: var(--text-title-color);
 
   margin-bottom: 4px;
-  padding-left: 24px;
-  padding-right: 24px;
 }
 
 .card-txt {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-
-  padding-left: 24px;
-  padding-right: 24px;
 }
 
 /* Section Footer */
 .page-footer {
-  background-color: var(--footer-background-color);
-}
-
-.page-footer > .container {
   padding-top: 60px;
   padding-bottom: 60px;
+
+  background-color: var(--footer-background-color);
 }
 
 .page-footer .logo {
@@ -429,6 +432,7 @@ p {
 
 .footer-link {
   display: block;
+
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
